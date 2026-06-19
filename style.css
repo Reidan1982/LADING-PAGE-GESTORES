@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* Fondo de la página: Plateado Claro Metálico con reflejos */
+    background: linear-gradient(135deg, #e0e0e0 0%, #f5f5f5 25%, #ffffff 50%, #e0e0e0 75%, #b8b8b8 100%);
+    background-size: 400% 400%;
+    animation: brilloPlata 15s ease infinite;
+    
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@keyframes brilloPlata {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.landing-wrapper {
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 30px 15px;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* --- CONTENEDOR DEL RECUADRO DE LOGWORK --- */
+.reloj-seccion {
+    margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor-widget-fijo {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto; 
+    display: inline-block;
+}
+
+/* --- BOTÓN DE CUPOS: FONDO PLATA CON TEXTO VERDE PETRÓLEO CLARO/VERDUSCO --- */
+.alerta-cupos {
+    background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 50%, #b8b8b8 100%);
+    color: #1b4d3e; /* CORREGIDO: Verde petróleo claro y verdusco de alta visibilidad */
+    display: inline-block;
+    padding: 12px 25px;
+    font-weight: 900; 
+    font-size: 18px;
+    border: 2px solid #1b4d3e; /* Borde haciendo juego con las letras */
+    border-radius: 8px;
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.15);
+    margin-bottom: 30px;
+    animation: pulse 2s infinite;
+}
+
+/* --- CONTENIDO MARKETING EXCLUSIVO EN COLOR ORO/GOLDEN --- */
+.bloque-texto {
+    color: #d4af37; 
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.bloque-texto h2 {
+    font-size: 26px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #d4af37; 
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.bloque-texto p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #d4af37; 
+}
+
+.bloque-texto p:last-of-type {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.bloque-texto strong {
+    color: #1b4d3e; /* Las negritas ahora resaltan en tu nuevo verde petróleo más claro */
+    font-weight: bold;
+}
+
+.bloque-texto .texto-destacado {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+    color: #d4af37; 
+    margin-top: 20px;
+}
+
+/* --- ANIMACIONES Y TU BOTÓN DE ORO PREMIUM --- */
+@keyframes destello {
+    0% { left: -100%; }
+    40% { left: 100%; }
+    100% { left: 100%; }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); box-shadow: 0px 8px 20px rgba(27,77,62,0.3); }
+    100% { transform: scale(1); }
+}
+
+.boton-premium-oro {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding: 18px 45px;
+    font-size: 22px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #000 !important; 
+    border-radius: 12px;
+    
+    background: linear-gradient(135deg, #fbf5b7 0%, #d4af37 25%, #b38728 50%, #d4af37 75%, #fbf5b7 100%);
+    background-size: 200% auto;
+    
+    border: 2px solid #fff5cc;
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.6), inset 0 0 10px rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.4s ease;
+    letter-spacing: 1px;
+    width: 90%; 
+    max-width: 380px;
+}
+
+.boton-premium-oro::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    transform: skewX(-25deg);
+    animation: destello 3s infinite ease-in-out;
+}
+
+.boton-premium-oro:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(212, 175, 55, 0.9);
+    filter: brightness(1.1);
+}
+
+@media (max-width: 400px) {
+    .bloque-texto h2 { font-size: 22px; }
+    .boton-premium-oro { font-size: 18px; padding: 15px 20px; }
+    .alerta-cupos { font-size: 15px; }
+}
