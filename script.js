@@ -5,11 +5,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const cuposIniciales = 50;
     const cuposMinimos = 3;
 
-    // FECHA EXACTA DE CIERRE (Miércoles 24 de Junio a las 16:00)
-    const fechaCierre = new Date(2026, 7, 01, 15, 3, 0).getTime();
+    // FECHA EXACTA DE CIERRE (Miércoles 01 de Julio a las 15:30)
+    const fechaCierre = new Date(2026, 6, 01, 15, 3, 0).getTime();
 
     // FECHA DE INICIO DE LA CAMPAÑA (Viernes 19 de Junio a las 08:00 AM)
-    const fechaInicioCampana = new Date(2026, 6, 26, 8, 0, 0).getTime();
+    const fechaInicioCampana = new Date(2026, 5, 26, 8, 0, 0).getTime();
 
     function actualizarCuposGlobales() {
         if (!elementoCupos) return; // Seguridad por si no encuentra el ID
